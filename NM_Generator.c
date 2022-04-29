@@ -34,7 +34,7 @@ void enable_PNCs(unsigned char NM_Frame[]){
 
 	if(enabled_PNC_count == 0)
 		return;
-	printf( "Enter the PNC IDs to be enabled(Valid From %d->%d)\n ",PNC_VECTOR_OFFSET*8,(FRAME_SIZE)*8-1);
+	printf( "Enter the PNC IDs to be enabled (Valid From %d->%d)\n ",PNC_VECTOR_OFFSET*8,(FRAME_SIZE)*8-1);
 	fflush(stdout);
 	for (int i = 0; i < enabled_PNC_count; i++) {
 		scanf("%d", &temp);
@@ -64,7 +64,7 @@ void disable_PNCs(unsigned char NM_Frame[]){
 	int disabled_PNC_count;
 	int temp,bytePosition;
 
-	printf("Enter the number of PNCs to be enabled: ");
+	printf("Enter the number of PNCs to be disabled: ");
 	fflush(stdout);
 	scanf("%d", &disabled_PNC_count);
 	printf("\n");
@@ -73,7 +73,7 @@ void disable_PNCs(unsigned char NM_Frame[]){
 	if(disabled_PNC_count == 0)
 		return;
 
-	printf( "Enter the PNC IDs to be enabled(Valid From %d->%d)\n ",PNC_VECTOR_OFFSET*8,(FRAME_SIZE)*8-1);
+	printf( "Enter the PNC IDs to be disabled (Valid From %d->%d)\n ",PNC_VECTOR_OFFSET*8,(FRAME_SIZE)*8-1);
 	fflush(stdout);
 
 	for (int i = 0; i < disabled_PNC_count; i++) {
